@@ -34,4 +34,15 @@ for i in range(1,numero+1):
         continue
     print(i)
     
+##Escribe un programa que simule una caja registradora: el usuario ingresa precios de
+#productos de a uno. Cuando ingresa 0, el programa se detiene y muestra el total
+#acumulado. Nota: utilizá la sentencia break cuando haga falta.
+total = 0 
+
+while True: 
+    precio = float(input("ingrese el precio del producto, para finalizar precione 0 "))
+    if precio == 0:
+        break
+    total = total + precio
+print (f"el total a pagar es:  ${total}")
 
