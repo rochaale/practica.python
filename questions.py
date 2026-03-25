@@ -30,7 +30,7 @@ while attempts > 0:
     print(f"Intentos restantes: {attempts}")
     print(f"Letras usadas: {', '.join(guessed)}")
     letter = input("Ingresá una letra: ")
-    #con la funcion not isalpha me genera false si no se ingreso un caracter corrercto.
+    # Con la funcion not isalpha me genera false si no se ingreso un caracter corrercto.
     if len(letter) != 1 or not letter.isalpha(): 
         print("Entrada no válida")
         print()
