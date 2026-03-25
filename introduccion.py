@@ -46,3 +46,4 @@ while True:
     total = total + precio
 print (f"el total a pagar es:  ${total}")
 
+
