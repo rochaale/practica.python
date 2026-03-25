@@ -19,9 +19,9 @@ while attempts > 0:
     progress = ""
     for letter in word:
         if letter in guessed:
-        progress += letter + " "
+            progress += letter + " "
         else:
-        progress += "_ "
+            progress += "_ "
     print(progress)
     # Verificar si el jugador ya adivinó la palabra completa
     if "_" not in progress:
