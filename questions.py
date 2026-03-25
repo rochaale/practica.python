@@ -12,6 +12,7 @@ words = [
 word = random.choice(words)
 guessed = []
 attempts = 6
+score = 6
 print("¡Bienvenido al Ahorcado!")
 print()
 while attempts > 0:
@@ -26,11 +27,12 @@ while attempts > 0:
     # Verificar si el jugador ya adivinó la palabra completa
     if "_" not in progress:
         print("¡Ganaste!")
+        print (f"Tu puntaje final es de: {score}")
         break
     print(f"Intentos restantes: {attempts}")
     print(f"Letras usadas: {', '.join(guessed)}")
     letter = input("Ingresá una letra: ")
-    # Con la funcion not isalpha me genera false si no se ingreso un caracter corrercto.
+    #Con la funcion not isalpha me genera false si no se ingreso un caracter corrercto.
     if len(letter) != 1 or not letter.isalpha(): 
         print("Entrada no válida")
         print()
@@ -43,7 +45,9 @@ while attempts > 0:
     else:
         guessed.append(letter)
         attempts -= 1
+        score -= 1
         print("Esa letra no está en la palabra.")
     print()
 else:
     print(f"¡Perdiste! La palabra era: {word}")
+    print (f"Tu puntaje final es de: {score}")
